@@ -1,0 +1,80 @@
+
+  
+  .header {
+    width: 10%;
+  }
+  .container-fluid {
+    padding-top: 10px;
+    background: linear-gradient(rgb(39, 136, 201), white);
+    height: 80px;
+    display: flex;
+  }
+
+  .homelink {
+    height: 100%;
+    width: 160px;
+    margin-left: 0px;
+  }
+
+  .img {
+    width: 90%;
+    height: 90%;
+  }
+
+
+  .loginForm {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+  
+  .background {
+    height: 100%;
+    width: 100%;
+  }
+
+  .simple-linear {
+    background: linear-gradient(rgb(39, 136, 201), white);
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: flex; */
+  }
+
+  .searchBar {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    width: 450px;
+  }
+
+
+  #search {
+    width: 400px;
+    height: 100%;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    justify-content: center;
+  }
+  /* nav{
+    padding-top: 10px;
+    padding-right: 10px;
+    text-align: right;
+    margin-right: 0px;
+  } */
+ 
+  .logout {
+    height: 100%;
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+
+
+  button {
+    float: right;
+  }

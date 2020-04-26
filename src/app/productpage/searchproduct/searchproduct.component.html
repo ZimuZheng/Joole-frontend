@@ -1,0 +1,34 @@
+<div>
+    <div style="margin-top:10px;">
+        <span id="SearchText">
+            Search: 
+        </span>
+        <d-button bsStyle="primary" (click)="saveFilter()"  style="margin-right:10px;">
+          Save
+        </d-button>
+        <d-button bsStyle="common" (click)="clearFilter()">
+          Clear
+        </d-button>
+    </div>
+    <div class="changetag">
+        <section>
+            <d-tabs type="options" [(activeTab)]="tab1acticeID" (activeTabChange)="activeTabChange($event)" customWidth="135px"> 
+              <d-tab id="tab1" title="Product" tabId="tab">
+                <ng-template dTabContent>
+                  <app-filterlist></app-filterlist>
+                  <app-techlist></app-techlist>
+                  <app-brandlist></app-brandlist>
+                </ng-template>
+              </d-tab>
+          
+              <d-tab id="tab2" title="Project" tabId="tab2" customWidth="135px">
+                <ng-template dTabContent>
+                  <p>
+                    Project
+                  </p>
+                </ng-template>
+              </d-tab>
+            </d-tabs>
+        </section>
+    </div>
+</div>

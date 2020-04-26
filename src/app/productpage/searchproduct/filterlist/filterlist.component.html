@@ -1,0 +1,30 @@
+<div>
+    <d-accordion
+  class="menu"
+  [data]="menu"
+  (itemClick)="itemClick($event)"
+  (menuToggle)="menuToggle($event)"
+  [innerListTemplate]="innerListTemplate"
+></d-accordion>
+
+<ng-template #innerListTemplate let-item="item">
+  <div class="devui-accordion-submenu my-menu">
+    <div>
+        <p style="font-weight: bolder;margin-left: 10px;">Use Type</p>
+        <d-radio-group [name]="'Use Type'" [values]="usetypes" [cssStyle]="'row'" [(ngModel)]="this.passDataService.usetype"> </d-radio-group>
+    </div>
+    <div>
+        <p style="font-weight: bolder;margin-left: 10px;">Application</p>
+        <d-radio-group [name]="'Application'" [values]="applications" [cssStyle]="'row'" [(ngModel)]="this.passDataService.application"> </d-radio-group>
+    </div>
+    <div>
+        <p style="font-weight: bolder;margin-left: 10px;">Mounting Location</p>
+        <d-radio-group [name]="'Mounting Location'" [values]="locations" [cssStyle]="'row'" [(ngModel)]="this.passDataService.location"> </d-radio-group>
+    </div>
+    <div>
+        <p style="font-weight: bolder;margin-left: 10px;">Accessories</p>
+        <d-radio-group [name]="'Accessories'" [values]="accessories" [cssStyle]="'row'" [(ngModel)]="this.passDataService.accessory"> </d-radio-group>
+    </div>
+  </div>
+</ng-template>
+</div>

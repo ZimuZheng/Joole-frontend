@@ -1,0 +1,61 @@
+<div>
+    <d-accordion
+  class="menu"
+  [data]="menu"
+  (itemClick)="itemClick($event)"
+  (menuToggle)="menuToggle($event)"
+  [innerListTemplate]="innerListTemplate"
+></d-accordion>
+
+<ng-template #innerListTemplate let-item="item">
+  <div class="devui-accordion-submenu my-menu">
+    <div>
+      <p class = "subtitle">Airflow</p>
+      <span class = 'textminmax'>min</span>
+      <span>
+        <d-input-number size="sm" [min]="min" [max]="max" [step]="step" [(ngModel)]="this.passdataService.minAirflow" class="input-number"></d-input-number>
+      </span>
+      <span class = 'textminmax'>max</span>
+      <span>
+        <d-input-number size="sm" [min]="min" [max]="max" [step]="step" [(ngModel)]="this.passdataService.maxAirflow" class="input-number"></d-input-number>
+      </span>
+    </div>
+    <div>
+      <p class = "subtitle">Max Power</p>
+      <span class = 'textminmax'>min</span>
+      <span>
+        <d-input-number size="sm" [min]="min" [max]="max" [step]="step" [(ngModel)]="this.passdataService.minPower" class="input-number"></d-input-number>
+      </span>
+      <span class = 'textminmax'>max</span>
+      <span>
+        <d-input-number size="sm" [min]="min" [max]="max" [step]="step" [(ngModel)]="this.passdataService.maxPower" class="input-number"></d-input-number>
+      </span>
+    </div>
+    <div>
+      <p class = "subtitle">Sound at max speed</p>
+      <span class = 'textminmax'>min</span>
+      <span>
+        <d-input-number size="sm" [min]="min" [max]="max" [step]="step" [(ngModel)]="this.passdataService.minSound" class="input-number"></d-input-number>
+      </span>
+      <span class = 'textminmax'>max</span>
+      <span>
+        <d-input-number size="sm" [min]="min" [max]="max" [step]="step" [(ngModel)]="this.passdataService.maxSound" class="input-number"></d-input-number>
+      </span>
+    </div>
+    <div>
+      <p class = "subtitle">Fan sweep diameter</p>
+      <span class = 'textminmax'>min</span>
+      <span>
+        <d-input-number size="sm" [min]="min" [max]="max" [step]="step" [(ngModel)]="this.passdataService.minDiameter" class="input-number"></d-input-number>
+      </span>
+      <span class = 'textminmax'>max</span>
+      <span>
+        <d-input-number size="sm" [min]="min" [max]="max" [step]="step" [(ngModel)]="this.passdataService.maxDiameter" class="input-number"></d-input-number>
+      </span>
+    </div>
+    
+    
+  </div>
+</ng-template>
+</div>
+

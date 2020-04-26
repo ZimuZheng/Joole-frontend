@@ -1,0 +1,24 @@
+<div>
+  <app-header></app-header>
+  <div>
+    <section>
+    <d-splitter [orientation]="orientation" [splitBarSize]="splitBarSize" style="height: 800px; border: 1px solid #E3E5E9;">
+      <d-splitter-pane [size]="size" [minSize]="minSize" [maxSize]="maxSize" [collapsible]="true" (sizeChange)="sizeChange($event)">
+        <div class="pane-content">
+          <app-searchproduct></app-searchproduct>
+        </div>
+      </d-splitter-pane>
+      <d-splitter-pane minSize="15%">
+        <div class="pane-content">
+          <app-showproduct></app-showproduct>
+        </div>
+      </d-splitter-pane>
+    </d-splitter>
+    </section>
+  </div>
+</div>
+
+
+
+
+

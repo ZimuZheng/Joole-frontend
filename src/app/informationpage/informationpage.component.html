@@ -1,0 +1,39 @@
+<div>
+    <app-header></app-header>
+    
+
+    <section>
+        <div dAnchorBox [view]="{ top: 60, bottom: 0 }" [defaultAnchor]="'base-info'" class="mymain" style="position:relative;">
+          <div class="mysidebar">
+            <d-sticky [view]="{ top: 60, bottom: 0 }">
+              <ul class="step-nav">
+                <li [dAnchorLink]="'base-info'" anchorActive="active">Product Summary</li>
+                <li [dAnchorLink]="'issue-list'" anchorActive="active">Product Details</li>
+                <li [dAnchorLink]="'case-list'" anchorActive="active">Product Documentation</li>
+                <li [dAnchorLink]="'quarlity-result'" anchorActive="active">Contact</li>
+              </ul>
+            </d-sticky>
+          </div>
+          <div class="mycontent">
+            <div [dAnchor]="'base-info'" class="section-block">
+              <p class="subtitle">Product Summary</p>
+              <app-productsummary></app-productsummary>
+            </div>
+            <div [dAnchor]="'issue-list'" class="section-block">
+              <p class="subtitle">Product Detail</p>
+              <app-productdetail></app-productdetail>
+            </div>
+            <div [dAnchor]="'case-list'" class="section-block">
+              <p class="subtitle">Product Documentation</p>
+              <app-productducumentation></app-productducumentation>
+            </div>
+            <div [dAnchor]="'quarlity-result'" class="section-block">
+              <p class="subtitle">Contact</p>
+              <app-productcontact></app-productcontact>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </div>
+  
