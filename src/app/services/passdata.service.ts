@@ -30,27 +30,25 @@ export class PassDataService implements OnInit {
 
     compare: Product[];
 
-    doFilter() {
-        for (let index = 0; index < this.products.length; index++) {
-            const element = this.products[index];
-            if (element.aid.utype == this.usetype &&
-                element.aid.app == this.application && 
-                element.aid.location == this.location &&
-                element.aid.access == this.accessory && 
-                +element.aid.airflow >= this.minAirflow &&
-                +element.aid.airflow <= this.maxAirflow &&
-                +element.aid.maxpower >= this.minPower && 
-                +element.aid.maxpower <= this.maxPower &&
-                +element.aid.sound >= this.minSound && 
-                +element.aid.sound <= this.maxSound &&
-                +element.aid.diameter >= this.minDiameter && 
-                +element.aid.diameter <= this.maxDiameter
+    doFilter(element:any) {
+            if (element.aid.utype == this.usetype
+                // element.aid.app == this.application && 
+                // element.aid.location == this.location &&
+                // element.aid.access == this.accessory && 
+                // +element.aid.airflow >= this.minAirflow &&
+                // +element.aid.airflow <= this.maxAirflow &&
+                // +element.aid.maxpower >= this.minPower && 
+                // +element.aid.maxpower <= this.maxPower &&
+                // +element.aid.sound >= this.minSound && 
+                // +element.aid.sound <= this.maxSound &&
+                // +element.aid.diameter >= this.minDiameter && 
+                // +element.aid.diameter <= this.maxDiameter
                 ) {
-                    this.filterProduct.push(element);
+                    return true;
+                } else {
+                    return false;
                 }
-            
-        }
-    }
+            }
 
     constructor() {
     }

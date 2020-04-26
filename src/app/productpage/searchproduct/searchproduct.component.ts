@@ -23,14 +23,11 @@ export class SearchproductComponent implements OnInit {
   }
 
   saveFilter() {
-    this.passdataService.doFilter;
-    console.log(this.passdataService.filterProduct)
     this.passdataService.filterOn = true;
   }
 
   clearFilter() {
     this.passdataService.filterOn = false;
-    this.passdataService.filterProduct = [];
   }
 
 }

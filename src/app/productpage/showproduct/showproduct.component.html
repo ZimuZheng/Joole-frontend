@@ -27,26 +27,25 @@
     </div>
 </div>
 <div style="display: flex;" *ngIf="this.passdataService.filterOn">
-    <div class = 'productdetail' *ngFor="let product of this.passdataService.filterProduct">
-    <div class = 'img'>
-        <a routerLink="/information/{{product.pid}}"><img src="assets/product{{product.pid}}.png" class = "img"/></a>
-    </div>
-    <div class = 'productlabel'>
-        <p>{{product.manufacturer}}</p>
-        <p>{{product.series}}</p>
-        <p>{{product.model}}</p>
-    </div>
-    <div class = 'techdetail'>
-        <P>{{product.aid.airflow}} CFM</P>
-        <p>{{product.aid.maxpower}} W at max speed</p>
-        <P>{{product.aid.sound}} dBA at max speed</P>
-        <p>{{product.aid.diameter}}" fan sweep diameter</p>
-    </div>
-    <div class = 'compare'>
-        <span>
+    <div class = 'productdetail' *ngFor="let product of this.passdataService.products">
+        <div class = 'img'>
+          <a routerLink="/information/{{product.pid}}"><img src="assets/product{{product.pid}}.png" class = "img"/></a>
+        </div>
+        <div class = 'productlabel'>
+          <p>{{product.manufacturer}}</p>
+          <p>{{product.series}}</p>
+          <p>{{product.model}}</p>
+        </div>
+        <div class = 'techdetail'>
+          <P>{{product.aid.airflow}} CFM</P>
+          <p>{{product.aid.maxpower}} W at max speed</p>
+          <P>{{product.aid.sound}} dBA at max speed</P>
+          <p>{{product.aid.diameter}}" fan sweep diameter</p>
+        </div>
+        <div class = 'compare'>
+          <span>
             <d-checkbox [label]="'Compare'" [isShowTitle]="false" (change)="onCheckboxChange($event)" [ngModel]="false"> </d-checkbox>
-        </span>
-    </div>
-    
-    </div>
+          </span>
+        </div>
+     </div>
 </div>
